@@ -2,51 +2,55 @@ import { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
 
 
-
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
         { name: "Beranda", href: "#" },
         { name: "Projek", href: "#" },
-        { name: "Tentang", href: "#" },
+        { name: "Kontak", href: "#" },
     ];
 
     return (
         <div className="bg-black">
 
-        <div className="navbar relative py-7 flex items-center justify-between">
-            <div className="logo text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:text-white">
-                Portofolio
-            </div>
+            <div className="navbar relative py-7 flex items-center justify-between">
+                <div className="logo text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:dark:text-white
+                px-5">
+                   <a href="#" className="hover:text-[#113F67] transition-colors duration-300 italic">Portofolio</a>
+                </div>
+                <ul className="hidden md:flex items-center gap-10 px-7">
+                    {menuItems.map((item) => (
+                        <li key={item.name} className="text-lg font-semibold italic">
+                            <a
+                                href={item.href}
+                                className="text-gray-800 dark:text-white hover:text-[#113F67] hover:underline
+                                transition-all duration-300">
+                                {item.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
 
-            <ul className="hidden md:flex items-center gap-10">
-                {menuItems.map((item) => (
-                    <li key={item.name} className="text-lg font-semibold">
-                        <a href={item.href}>{item.name}</a>
-                    </li>
-                ))}
-            </ul>
+                <div className="md:hidden">
+                    <AnimatedHamburgerButton
+                        active={isMenuOpen}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    />
+                </div>
 
-            <div className="flex-none md:hidden">
-                <AnimatedHamburgerButton
-                    active={isMenuOpen}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                />
-            </div>
-
-            <ul className={`
+                <ul className={`
                 absolute top-full left-0 w-full bg-white text-black md:hidden rounded-xl
                 ${isMenuOpen ? 'block' : 'hidden'}
             `}>
-                {menuItems.map((item) =>
-                    <li key={item.name} className="border-b">
-                        <a href={item.href} className="block p-4">{item.name}</a>
-                    </li>
-                )}
-            </ul>
+                    {menuItems.map((item) =>
+                        <li key={item.name} className="border-b">
+                            <a href={item.href} className="block p-4">{item.name}</a>
+                        </li>
+                    )}
+                </ul>
+            </div>
         </div>
-</div>
     );
 }
 
@@ -55,7 +59,7 @@ type AnimatedProps = {
     active: boolean;
     onClick: () => void;
 };
-const AnimatedHamburgerButton = ({ active, onClick } : AnimatedProps) => {
+const AnimatedHamburgerButton = ({ active, onClick }: AnimatedProps) => {
     // const [active, setActive] = useState(false); <-- Dihapus
     return (
         <MotionConfig
