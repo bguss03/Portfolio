@@ -16,10 +16,10 @@ export default function Navbar() {
 
             <div className="navbar relative py-7 flex items-center justify-between">
                 <div className="logo text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:dark:text-white
-                px-5">
+                px-10">
                    <a href="#" className="hover:text-[#113F67] transition-colors duration-300 italic">Portofolio</a>
                 </div>
-                <ul className="hidden md:flex items-center gap-10 px-7">
+                <ul className="hidden md:flex items-center gap-10 px-10">
                     {menuItems.map((item) => (
                         <li key={item.name} className="text-lg font-semibold italic">
                             <a
