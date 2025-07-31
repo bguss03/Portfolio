@@ -12,12 +12,11 @@ export default function Navbar() {
     ];
 
     return (
-        <div className="bg-black">
-
+        <div className="Navbar">
             <div className="navbar relative py-7 flex items-center justify-between">
-                <div className="logo text-3xl font-bold bg-white text-black p-1 md:bg-transparent md:dark:text-white
-                px-10">
-                   <a href="#" className="hover:text-[#113F67] transition-colors duration-300 italic">Portofolio</a>
+                <div className="logo text-3xl font-bold text-white p-1 md:bg-transparent md:dark:text-white
+                px-10 hover:underline transition-all duration-300">
+                    <a href="#" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</a>
                 </div>
                 <ul className="hidden md:flex items-center gap-10 px-10">
                     {menuItems.map((item) => (
@@ -31,7 +30,8 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-
+                
+                {/* Dropdown */}
                 <div className="md:hidden">
                     <AnimatedHamburgerButton
                         active={isMenuOpen}
@@ -40,12 +40,12 @@ export default function Navbar() {
                 </div>
 
                 <ul className={`
-                absolute top-full left-0 w-full bg-white text-black md:hidden rounded-xl
-                ${isMenuOpen ? 'block' : 'hidden'}
-            `}>
+                    absolute top-full left-0 w-full bg-zinc-900 text-white md:hidden rounded-4xl
+                    overflow-hidden transition-all duration-800 
+                    ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
                     {menuItems.map((item) =>
-                        <li key={item.name} className="border-b">
-                            <a href={item.href} className="block p-4">{item.name}</a>
+                        <li key={item.name} className="border-b border-b-white/20">
+                            <a href={item.href} className="block p-4 hover:bg-white/10">{item.name}</a>
                         </li>
                     )}
                 </ul>
@@ -54,13 +54,11 @@ export default function Navbar() {
     );
 }
 
-// --- PERBAIKAN DI SINI ---
 type AnimatedProps = {
     active: boolean;
     onClick: () => void;
 };
 const AnimatedHamburgerButton = ({ active, onClick }: AnimatedProps) => {
-    // const [active, setActive] = useState(false); <-- Dihapus
     return (
         <MotionConfig
             transition={{
@@ -71,7 +69,7 @@ const AnimatedHamburgerButton = ({ active, onClick }: AnimatedProps) => {
             <motion.button
                 initial={false}
                 animate={active ? "open" : "closed"}
-                onClick={onClick} // <-- Diubah
+                onClick={onClick}
                 className="relative h-20 w-20 rounded-full bg-white/0 transition-colors hover:bg-white/20"
             >
                 <motion.span
@@ -124,6 +122,3 @@ const VARIANTS = {
         },
     },
 };
-
-// Komponen Example tidak diperlukan di dalam file Navbar.jsx, bisa dihapus
-// export const Example = () => { ... }
