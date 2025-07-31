@@ -21,7 +21,6 @@ export default function Hero() {
                             />
                         </div>
                         <div className="flex items-center gap-4 mt-5">
-                            
                             <a href="#" className="bg-[#77BEF0] hover:bg-[#113F67] hover:animate-bounce duration-100 delay-300 ease-in-out
                          sm:flex rounded-2xl sm:rounded-3xl p-3 items-center gap-2">
                                 Download Cv

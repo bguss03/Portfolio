@@ -7,10 +7,11 @@ import Skill6 from "./assets/images/tailwind.png";
 import Skill7 from "./assets/images/bootstrap.png";
 import Skill8 from "./assets/images/reactjs.png";
 import Skill9 from "./assets/images/php.png";
-import Skill10 from "./assets/images/docker.png";
 import Skill11 from "./assets/images/MySQL.png";
 import Skill12 from "./assets/images/MongoDB.png";
+import Skill13 from "./assets/images/ts-logo-512.png";
 import Tools1 from "./assets/images/vscode.png"
+import Tools2 from "./assets/images/docker.png";
 
 export const Tools = [
     {
@@ -18,8 +19,14 @@ export const Tools = [
         name : "Visual Studio Code",
         image : Tools1,
         ket : "Code Editor",
-    }
-]
+    },
+    {
+        id : 10,
+        name : "Docker",
+        image : Tools2,
+        ket : "Container"
+    },
+];
 
 export const listSkill = [
     {
@@ -32,7 +39,7 @@ export const listSkill = [
         id : 2,
         name : "Css",
         image : Skill2,
-        ket : "Desain Visual dan Layout Web",
+        ket : "Desain Visual Web",
     },
     {
         id : 3,
@@ -53,14 +60,20 @@ export const listSkill = [
         ket : "Language",
     },
     {
+        id : 13,
+        name : "TypeScript",
+        image : Skill13,
+        ket : "Language",
+    },
+    {
         id : 6,
-        name : "Tailwind Css",
+        name : "Tailwindcss",
         image : Skill6,
         ket : "Framework Css",
     },
     {
         id : 7,
-        name : "Bootstrap",
+        name : "Bootstrap 5",
         image : Skill7,
         ket : "Framework Css",
     },
@@ -75,12 +88,6 @@ export const listSkill = [
         name : "PHP",
         image : Skill9,
         ket : "Language"
-    },
-    {
-        id : 10,
-        name : "Docker",
-        image : Skill10,
-        ket : "Container"
     },
     {
         id : 11,
