@@ -1,17 +1,16 @@
 import { listSkill, Tools } from '../../data';
 
-// Nama komponen lebih baik "Tools" atau "SkillsSection"
 export default function ToolsSection() {
   return (
     <div className="py-10"> 
       <div className="p-6 text-center" data-aos="fade-up">
-        <h1 className="text-6xl italic font-bold">Tools</h1>
+        <h1 className="text-4xl italic font-bold">Programming Languages & Tools</h1>
       </div>
       
-      <div className="flex justify-center mt-10 gap-6 px-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 px-3 sm:flex justify-center mt-10 gap-6 max-w-4xl mx-auto">
         {Tools.map((tool) => (
           <div
-            className="flex items-center gap-3 p-3 border border-zinc-700 rounded-md hover:bg-zinc-700"
+            className="flex items-center gap-3 p-2 sm:w-2xs  border border-zinc-700 rounded-md hover:bg-zinc-700"
             key={tool.id}
             data-aos="fade-up"
           >
@@ -24,10 +23,10 @@ export default function ToolsSection() {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-10 w-full max-w-4xl mx-auto ">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6 sm:mt-10 w-full max-w-4xl mx-auto px-3">
         {listSkill.map((skill, index) => (
           <div
-            className="flex items-center gap-3 p-3 border border-zinc-700 rounded-md hover:bg-zinc-700"
+            className="flex items-center gap-3 p-2 border border-zinc-700 rounded-md hover:bg-zinc-700"
             key={skill.id}
             data-aos="fade-up"
             data-aos-delay={index * 50}

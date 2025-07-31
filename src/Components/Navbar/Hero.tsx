@@ -6,7 +6,7 @@ export default function Hero() {
         <div>
             <div className="flex flex-col-reverse sm:flex-row items-center
                     sm:justify-center pt-5 sm:pt-15 gap-16 p-25">
-                <div className="flex flex-col px-10 items-center sm:items-start sm:text-left min-w-[550px]">
+                <div className="flex flex-col px-10 items-center sm:items-start sm:text-left min-w-[350px] sm:min-w-[550px]">
                     <h1 className="text-3xl font-bold italic 
                             [text-shadow:2px_2px_4px_rgba(34,211,238,0.6)] sm:text-5xl">Hi, I am  Bagus </h1>
                     <div className="text-animation">
