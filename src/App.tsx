@@ -5,7 +5,6 @@ import Hero from './Components/Navbar/Hero';
 import Tentang from './Components/Layout/Tentang'; 
 import AnimatedContent from './assets/AnimatedContent/AnimatedContent';
 import Tools from './Components/Layout/Toolss';
-import Projek from './Components/Layout/Projek';
 
 function App() {
   useEffect(() => {
@@ -36,7 +35,7 @@ function App() {
         </AnimatedContent>
       <Tentang />
       <Tools />
-      <Projek />
+      {/* <Projek /> */}
     </>
   );
 }
