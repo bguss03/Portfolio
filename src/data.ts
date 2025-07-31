@@ -16,7 +16,7 @@ import Tools2 from "./assets/images/docker.png";
 export const Tools = [
     {
         id : 1,
-        name : "Visual Studio Code",
+        name : "VSCODE",
         image : Tools1,
         ket : "Code Editor",
     },
@@ -33,13 +33,13 @@ export const listSkill = [
         id : 1,
         name : "Html",
         image : Skill1,
-        ket : "Struktur dan Fundasi Web ",
+        ket : "Struktur Web",
     },
     {
         id : 2,
         name : "Css",
         image : Skill2,
-        ket : "Desain Visual Web",
+        ket : "Desain Web",
     },
     {
         id : 3,
@@ -69,19 +69,19 @@ export const listSkill = [
         id : 6,
         name : "Tailwindcss",
         image : Skill6,
-        ket : "Framework Css",
+        ket : "Framework",
     },
     {
         id : 7,
         name : "Bootstrap 5",
         image : Skill7,
-        ket : "Framework Css",
+        ket : "Framework",
     },
     {
         id : 8,
-        name : "React Js",
+        name : "ReactJS",
         image : Skill8,
-        ket : "Library JavaScript",
+        ket : "Library",
     },
     {
         id : 9,
@@ -91,14 +91,14 @@ export const listSkill = [
     },
     {
         id : 11,
-        name : "Mysql",
+        name : "MySQL",
         image : Skill11,
-        ket : "Database SQL"
+        ket : "Database"
     },
     {
         id : 12,
         name : "Mongo DB",
         image : Skill12,
-        ket : "Database No SQL"
+        ket : "Database"
     },
 ];

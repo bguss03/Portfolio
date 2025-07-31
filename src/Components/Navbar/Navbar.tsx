@@ -6,19 +6,19 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
-        { name: "Beranda", href: "#" },
-        { name: "Projek", href: "#" },
-        { name: "Kontak", href: "#" },
+        { name: "Home", href: "#" },
+        { name: "Project", href: "#" },
+        { name: "Contact", href: "#" },
     ];
 
     return (
-        <div className="Navbar">
-            <div className="navbar relative py-7 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto">
+            <div className="navbar relative py-5 flex items-center justify-between">
                 <div className="logo text-3xl font-bold text-white p-1 md:bg-transparent md:dark:text-white
-                px-10 hover:underline transition-all duration-300">
+                px-5 hover:underline transition-all duration-300 ">
                     <a href="#" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</a>
                 </div>
-                <ul className="hidden md:flex items-center gap-10 px-10">
+                <ul className="hidden md:flex items-center gap-10 px-5">
                     {menuItems.map((item) => (
                         <li key={item.name} className="text-lg font-semibold italic">
                             <a
@@ -40,7 +40,7 @@ export default function Navbar() {
                 </div>
 
                 <ul className={`
-                    absolute top-full left-0 w-full bg-zinc-900 text-white md:hidden rounded-4xl
+                    absolute top-full left-0 w-full bg-zinc-900 text-white md:hidden rounded-3xl
                     overflow-hidden transition-all duration-800 
                     ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
                     {menuItems.map((item) =>

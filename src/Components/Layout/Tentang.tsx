@@ -2,13 +2,17 @@
 export default function Projek() {
   return (
     <div data-aos="fade-up">
-      <div className=" w-full sm:w-2/3  mx-auto p-6 rounded-4xl bg-zinc-800 mt-20 sm:mt-2 min-h-[280px] ">
+      <div className=" w-full sm:w-2/3  mx-auto p-6 rounded-4xl bg-zinc-800 mt-2 sm:mt-2 min-h-[280px] ">
         <h1 className="text-7xl text-center italic font-bold">
-          Tentang
+          About
         </h1>
         <div>
-          <p className="text-2xl text-center font-mono py-4">
-            Hi!, perkenalkan saya Ananda Bagus Shevchenko, seorang Front End Web Developer dan Full stack Enthusiast. Sebagai lulusan SMK Rekayasa Perangkat Lunak dan mahasiswa Universitas Semarang, saya siap untuk mengejar karir dan memberikan konstribusi berarti di dunia software development.
+          <p className="text-2xl text-center font-mono py-3">
+            Hi! My name is Ananda Bagus Shevchenko, and I am a Front End Web
+            Developer and Full Stack Enthusiast. As a graduate of SMK Rekayasa
+            Perangkat Lunak and a student at Semarang University, I am ready to
+            pursue a career and make a meaningful contribution to the world of software
+            development.
           </p>
         </div>
       </div>
