@@ -4,7 +4,7 @@ import TextType from "../../assets/TextType/TextType";
 export default function Hero() {
     return (
         <div>
-            <div className="flex flex-col-reverse sm:flex-row min-h-screen items-center
+            <div className="flex flex-col-reverse sm:flex-row items-center
                     sm:justify-center pt-5 sm:pt-0 gap-16 p-25">
                 <div className="flex flex-col px-10 items-center sm:items-start sm:text-left min-w-[550px]">
                     <h1 className="text-3xl font-bold italic 
