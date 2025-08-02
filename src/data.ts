@@ -1,7 +1,7 @@
-import Skill1 from "./assets/images/html.png";
-import Skill2 from "./assets/images/css.png";
-import Skill3 from "./assets/images/figma.png";
-import Skill4 from "./assets/images/github.png";
+import Skill1 from "./assets/images/figma.png";
+import Skill2 from "./assets/images/github.png";
+import Skill3 from "./assets/images/html.png";
+import Skill4 from "./assets/images/css.png";
 import Skill5 from "./assets/images/js.png";
 import Skill6 from "./assets/images/tailwind.png";
 import Skill7 from "./assets/images/bootstrap.png";
@@ -12,6 +12,8 @@ import Skill12 from "./assets/images/MongoDB.png";
 import Skill13 from "./assets/images/ts-logo-512.png";
 import Tools1 from "./assets/images/vscode.png"
 import Tools2 from "./assets/images/docker.png";
+import WebWisata from "./assets/images/WebWisata.jpeg"
+import BookShelf from "./assets/images/BookShelfApp.png"
 
 export const Tools = [
     {
@@ -31,27 +33,27 @@ export const Tools = [
 export const listSkill = [
     {
         id : 1,
-        name : "Html",
-        image : Skill1,
-        ket : "Struktur Web",
-    },
-    {
-        id : 2,
-        name : "Css",
-        image : Skill2,
-        ket : "Desain Web",
-    },
-    {
-        id : 3,
         name : "Figma",
-        image : Skill3,
+        image : Skill1,
         ket : "Desain App",
     },
     {
-        id : 4,
+        id : 2,
         name : "Github",
-        image : Skill4,
+        image : Skill2,
         ket : "Repository",
+    },
+    {
+        id : 3,
+        name : "Html",
+        image : Skill3,
+        ket : "Struktur Web",
+    },
+    {
+        id : 4,
+        name : "Css",
+        image : Skill4,
+        ket : "Desain Web",
     },
     {
         id : 5,
@@ -73,7 +75,7 @@ export const listSkill = [
     },
     {
         id : 7,
-        name : "Bootstrap 5",
+        name : "Bootstrap",
         image : Skill7,
         ket : "Framework",
     },
@@ -97,8 +99,25 @@ export const listSkill = [
     },
     {
         id : 12,
-        name : "Mongo DB",
+        name : "MongoDB",
         image : Skill12,
         ket : "Database"
     },
 ];
+
+export const Project = [
+    {
+        id : 1,
+        name : "Website Tourism Semarang",
+        ket : "This is my final project for my graduation grade.",
+        image : WebWisata,
+        tools : ["Html", "Bootstrap 5", "Css", "PHP"]
+    },    
+    {
+        id : 2,
+        name : "Book Shelf App",
+        ket : "This is a project from Dicoding.",
+        image : BookShelf,
+        tools : ["Html", "Css", "JavaScript"]
+    },    
+]
