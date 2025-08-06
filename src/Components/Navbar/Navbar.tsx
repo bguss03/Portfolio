@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
-import { Link } from "react-router-dom";
-// import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,70 +11,62 @@ export default function Navbar() {
         { name: "Contact", href: "/Contact" },
     ];
 
-    // const defaultNavbar = "text-gray-800 dark:text-white hover:text-[#113F67] hover:underline transition-all duration-300";
-    // const activeNavbar = ""
-
-//     const [fix, setFix] = useState(false);
-
-//   useEffect (() => {
-//     const handleScroll = () => {
-//       if (window.scrollY > 150){
-//         setFix(true)
-//       }else {
-//         setFix(false)
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-
-//     return () =>{
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   },[]);
+   
+        const defaultNavStyles = "hover:bg-sky-500/20 py-3 px-3 rounded-full";
+        const activeNavStyles = "dark:text-white font-semibold bg-sky-500/20 py-3 px-3 rounded-full";
 
 
     return (
-        <nav>
-        <div className="max-w-5xl mx-auto">
-            <div className="navbar relative py-5 flex items-center justify-between">
-                <div className="logo text-3xl font-bold text-white p-1 md:bg-transparent md:dark:text-white
-                px-5 hover:underline transition-all duration-300 ">
-                    <Link to="/" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</Link>
-                </div>
-                <ul className='hidden md:flex items-center gap-10 px-5'>
-                    {menuItems.map((item) => (
-                        <li key={item.name} className="text-lg font-semibold italic">
-                            <Link
-                                to={item.href}
-                                className="text-gray-800 dark:text-white hover:text-[#113F67] hover:underline
-                                transition-all duration-300">
-                                {item.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-                
-                {/* Dropdown */}
-                <div className="md:hidden">
-                    <AnimatedHamburgerButton
-                        active={isMenuOpen}
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    />
-                </div>
+        <nav className="relative z-50">
+            <div className="max-w-5xl mx-auto">
+                <div className="navbar relative py-5 flex items-center justify-between">
+                    <div className="logo text-3xl font-bold text-white p-1 md:bg-transparent md:dark:text-white px-5">
+                        <NavLink to="/" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</NavLink>
+                    </div>
 
-                <ul className={`
-                    absolute top-full left-0 w-full bg-zinc-900 text-white md:hidden rounded-3xl
+                    <ul className='hidden md:flex items-center gap-5 px-5'>
+                        {menuItems.map((item) => (
+                            <li key={item.name} className="text-lg font-semibold italic">
+                                <NavLink
+                                    to={item.href}
+                                    className={({ isActive }) => 
+                                        `dark:text-white ${isActive ? activeNavStyles : defaultNavStyles}`
+                                    }
+                                >
+                                    {item.name}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Dropdown Button */}
+                    <div className="md:hidden">
+                        <AnimatedHamburgerButton
+                            active={isMenuOpen}
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        />
+                    </div>
+                    <ul className={`
+                    absolute top-full left-0 w-full bg-zinc-900 text-white md:hidden
                     overflow-hidden transition-all duration-800 
                     ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
-                    {menuItems.map((item) =>
-                        <li key={item.name} className="border-b border-b-white/20">
-                            <Link to={item.href} className="block p-4 hover:bg-white/10" >{item.name}</Link>
-                        </li>
-                    )}
-                </ul>
+                        {menuItems.map((item) =>
+                            <li key={item.name} className="border-b border-b-white/20">
+                                <NavLink 
+                                    to={item.href} 
+                                    className={({ isActive }) => 
+                                        `block p-4 hover:bg-white/10 ${isActive ? 'bg-white/20 font-bold' : ''}`
+                                    }
+                                    onClick={() => setIsMenuOpen(false)} 
+                                >
+                                    {item.name}
+                                </NavLink>
+                            </li>
+                        )}
+                    </ul>
+                </div>
             </div>
-        </div>
-</nav>
+        </nav>
     );
 }
 
@@ -121,9 +112,6 @@ const AnimatedHamburgerButton = ({ active, onClick }: AnimatedProps) => {
         </MotionConfig>
     );
 };
-
-
-
 
 const VARIANTS = {
     top: {

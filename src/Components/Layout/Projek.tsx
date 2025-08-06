@@ -38,7 +38,7 @@ export default function Projek() {
         ))}
       </div>
       <div className="py-10" data-aos="fade-up" data-aos-delay={200}>
-        <Link to="/Project">
+        <Link to="/project">
             <button className="w-40 h-13 bg-[#77BEF0] hover:bg-[#113F67] p-3 rounded-2xl italic text-center font-bold">More Projects</button>
         </Link>
         </div>

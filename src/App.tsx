@@ -9,6 +9,7 @@ import Projek from './Components/Layout/Projek';
 import { Routes, Route } from 'react-router-dom';
 import ProjectAll from './Components/Pages/ProjectAll';
 import Contact from './Components/Pages/Contact';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
   }, []);
   return (
     <>
+    <ScrollToTop />
       <Routes>
         <Route
           path='/'

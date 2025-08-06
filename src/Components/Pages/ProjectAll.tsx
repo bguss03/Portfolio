@@ -5,7 +5,7 @@ export default function ProjectAll() {
   return (
     <div>
       <Navbar />
-      <div className="text-center mt-2" data-aos="fade-up">
+      <div className="text-center pt-5" data-aos="fade-up">
         <div>
           <h1 className="text-4xl md:text-6xl font-bold italic">Project</h1>
         </div>
