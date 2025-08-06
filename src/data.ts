@@ -14,6 +14,7 @@ import Tools1 from "./assets/images/vscode.png"
 import Tools2 from "./assets/images/docker.png";
 import WebWisata from "./assets/images/WebWisata.jpeg"
 import BookShelf from "./assets/images/BookShelfApp.png"
+import Portfolio from "./assets/images/portfolio.png"
 
 export const Tools = [
     {
@@ -108,10 +109,10 @@ export const listSkill = [
 export const Project = [
     {
         id : 1,
-        name : "Website Tourism Semarang",
+        name : "Semarang tourism website",
         ket : "This is my final project for my graduation grade.",
         image : WebWisata,
-        tools : ["Html", "Bootstrap 5", "Css", "PHP"]
+        tools : ["Html", "Css", "Bootstrap 5", "Javascript", "PHP"]
     },    
     {
         id : 2,
@@ -120,4 +121,21 @@ export const Project = [
         image : BookShelf,
         tools : ["Html", "Css", "JavaScript"]
     },    
+    {
+        id : 3,
+        name : "Personal Portfolio",
+        ket : "This is my personal portfolio website.",
+        image : Portfolio,
+        tools : ["Typescript", "ReactJs", "Tailwindcss"]
+    },    
 ]
+
+// export const Project1 = [
+//     {
+//         id : 1,
+//         name : "Personal Portfolio",
+//         ket : "This is my personal portfolio website.",
+//         image : Portfolio,
+//         tools : ["Typescript", "ReacJs", "Tailwindcss"]
+//     },
+// ]

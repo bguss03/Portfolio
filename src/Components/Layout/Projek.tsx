@@ -1,15 +1,14 @@
 import { Project } from "../../data";
+import { Link } from "react-router-dom";
 
 export default function Projek() {
+
   return (
-    <div className="text-center mt-10 py-10" data-aos="fade-up">
-      <div>
+    <div className="text-center py-10" data-aos="fade-up">
+      <div className="">
         <h1 className="text-4xl md:text-6xl font-bold italic">Project</h1>
       </div>
-      <div>
-        <p className="text-base/loose opacity-50 px-4">Here are some projects I have worked on</p>
-      </div>
-      <div className="project-box px-4 md:px-16 lg:px-60 mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {Project.map((projects, index) => (
           <div
             className="border border-zinc-700 rounded-3xl overflow-hidden flex flex-col h-full"
@@ -38,6 +37,11 @@ export default function Projek() {
           </div>
         ))}
       </div>
+      <div className="py-10" data-aos="fade-up" data-aos-delay={200}>
+        <Link to="/Project">
+            <button className="w-40 h-13 bg-[#77BEF0] hover:bg-[#113F67] p-3 rounded-2xl italic text-center font-bold">More Projects</button>
+        </Link>
+        </div>
     </div>
   );
 }

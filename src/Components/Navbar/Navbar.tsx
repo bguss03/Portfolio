@@ -1,32 +1,56 @@
 import { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
+// import { useEffect } from "react";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
-        { name: "Home", href: "#" },
-        { name: "Project", href: "#" },
-        { name: "Contact", href: "#" },
+        { name: "Home", href: "/" },
+        { name: "Project", href: "/Project" },
+        { name: "Contact", href: "/Contact" },
     ];
 
+    // const defaultNavbar = "text-gray-800 dark:text-white hover:text-[#113F67] hover:underline transition-all duration-300";
+    // const activeNavbar = ""
+
+//     const [fix, setFix] = useState(false);
+
+//   useEffect (() => {
+//     const handleScroll = () => {
+//       if (window.scrollY > 150){
+//         setFix(true)
+//       }else {
+//         setFix(false)
+//       }
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+
+//     return () =>{
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   },[]);
+
+
     return (
+        <nav>
         <div className="max-w-5xl mx-auto">
             <div className="navbar relative py-5 flex items-center justify-between">
                 <div className="logo text-3xl font-bold text-white p-1 md:bg-transparent md:dark:text-white
                 px-5 hover:underline transition-all duration-300 ">
-                    <a href="#" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</a>
+                    <Link to="/" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</Link>
                 </div>
-                <ul className="hidden md:flex items-center gap-10 px-5">
+                <ul className='hidden md:flex items-center gap-10 px-5'>
                     {menuItems.map((item) => (
                         <li key={item.name} className="text-lg font-semibold italic">
-                            <a
-                                href={item.href}
+                            <Link
+                                to={item.href}
                                 className="text-gray-800 dark:text-white hover:text-[#113F67] hover:underline
                                 transition-all duration-300">
                                 {item.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -45,12 +69,13 @@ export default function Navbar() {
                     ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
                     {menuItems.map((item) =>
                         <li key={item.name} className="border-b border-b-white/20">
-                            <a href={item.href} className="block p-4 hover:bg-white/10">{item.name}</a>
+                            <Link to={item.href} className="block p-4 hover:bg-white/10" >{item.name}</Link>
                         </li>
                     )}
                 </ul>
             </div>
         </div>
+</nav>
     );
 }
 

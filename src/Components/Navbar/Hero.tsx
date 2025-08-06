@@ -1,5 +1,7 @@
 import Foto from "../../assets/images/Foto.jpg";
 import TextType from "../../assets/TextType/TextType";
+import Resume from "../../assets/file/CV_Ananda Bagus Shevchenko.pdf"
+
 
 export default function Hero() {
     return (
@@ -21,7 +23,7 @@ export default function Hero() {
                         />
                     </div>
                     <div className="flex items-center mt-5">
-                        <a href="#" className="bg-[#77BEF0] hover:bg-[#113F67] flex sm:flex rounded-2xl sm:rounded-2xl p-3 items-center gap-2 font-bold">
+                        <a href={Resume} download={Resume} className="bg-[#77BEF0] hover:bg-[#113F67] flex sm:flex rounded-2xl sm:rounded-2xl p-3 items-center font-bold">
                             Download CV
                             <i className="ri-download-line ri-lg"></i>
                         </a>

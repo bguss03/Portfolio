@@ -1,6 +1,6 @@
 import { listSkill, Tools } from '../../data';
 
-export default function ToolsSection() {
+export default function Toolss() {
   return (
     <div className="py-10"> 
       <div className="p-6 text-center" data-aos="fade-up">
