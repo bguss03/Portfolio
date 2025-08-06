@@ -15,6 +15,7 @@ import Tools2 from "./assets/images/docker.png";
 import WebWisata from "./assets/images/WebWisata.jpeg"
 import BookShelf from "./assets/images/BookShelfApp.png"
 import Portfolio from "./assets/images/portfolio.png"
+import Sertifikat from "./assets/file/Sertifikat_Dicoding.pdf"
 
 export const Tools = [
     {
@@ -128,14 +129,13 @@ export const Project = [
         image : Portfolio,
         tools : ["Typescript", "ReactJs", "Tailwindcss"]
     },    
-]
+];
 
-// export const Project1 = [
-//     {
-//         id : 1,
-//         name : "Personal Portfolio",
-//         ket : "This is my personal portfolio website.",
-//         image : Portfolio,
-//         tools : ["Typescript", "ReacJs", "Tailwindcss"]
-//     },
-// ]
+export const Certificate = [
+    {
+        id : 1,
+        name : "Certificate Dicoding",
+        ket : "Certificate: Web Front-End Development (Beginner Level) Dicoding Indonesia",
+        file : Sertifikat,
+    },
+]

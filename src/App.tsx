@@ -10,6 +10,7 @@ import { Routes, Route } from 'react-router-dom';
 import ProjectAll from './Components/Pages/ProjectAll';
 import Contact from './Components/Pages/Contact';
 import ScrollToTop from './Components/ScrollToTop';
+// import Sertifikat from './Components/Layout/Sertifikat';
 
 function App() {
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
               <Tentang />
               <Tools />
               <Projek />
+              {/* <Sertifikat /> */}
             </>
           }
         />

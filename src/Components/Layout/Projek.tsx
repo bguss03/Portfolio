@@ -16,11 +16,11 @@ export default function Projek() {
             data-aos="fade-up"
             data-aos-delay={index * 200}
           >
-            <div className="w-full aspect-video overflow-hidden">
+            <div className="w-full overflow-hidden">
               <img
                 src={projects.image}
                 alt={projects.name}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                className="w-full h-50 object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div className="p-4 flex flex-col flex-grow">
@@ -28,7 +28,7 @@ export default function Projek() {
               <p className="text-base/loose mb-4 opacity-70 flex-grow">{projects.ket}</p>
               <div className="flex flex-wrap gap-2">
                 {projects.tools.map((tool, index) => (
-                  <p key={index} className="py-1 px-3 border border-zinc-500 rounded-lg font-semibold text-sm hover:bg-zinc-700">
+                  <p key={index} className="py-1 px-2 border border-zinc-500 rounded-lg font-semibold text-sm hover:bg-zinc-700">
                     {tool}
                   </p>
                 ))}
