@@ -3,14 +3,15 @@ import AOS from 'aos';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Navbar/Hero';
 import Tentang from './Components/Layout/Tentang';
-import AnimatedContent from './assets/AnimatedContent/AnimatedContent';
+// import AnimatedContent from './assets/AnimatedContent/AnimatedContent';
 import Tools from './Components/Layout/Toolss';
 import Projek from './Components/Layout/Projek';
 import { Routes, Route } from 'react-router-dom';
 import ProjectAll from './Components/Pages/ProjectAll';
 import Contact from './Components/Pages/Contact';
 import ScrollToTop from './Components/ScrollToTop';
-// import Sertifikat from './Components/Layout/Sertifikat';
+import Sertifikat from './Components/Layout/Sertifikat';
+import NotFound from './Components/Pages/NotFound';
 
 function App() {
   useEffect(() => {
@@ -28,30 +29,18 @@ function App() {
           path='/'
           element={
             <>
-              <AnimatedContent
-                distance={300}
-                direction="vertical"
-                reverse={false}
-                duration={1}
-                ease="power3.out"
-                initialOpacity={1}
-                animateOpacity
-                scale={1}
-                threshold={0.2}
-                delay={0}
-              >
                 <Navbar />
                 <Hero />
-              </AnimatedContent>
               <Tentang />
               <Tools />
               <Projek />
-              {/* <Sertifikat /> */}
+              <Sertifikat />
             </>
           }
         />
         <Route path='/project' element={<ProjectAll />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
     </>
   );

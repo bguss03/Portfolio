@@ -15,7 +15,11 @@ import Tools2 from "./assets/images/docker.png";
 import WebWisata from "./assets/images/WebWisata.jpeg"
 import BookShelf from "./assets/images/BookShelfApp.png"
 import Portfolio from "./assets/images/portfolio.png"
-import Sertifikat from "./assets/file/Sertifikat_Dicoding.pdf"
+// import Sertifikat from "./assets/file/Sertifikat_Dicoding.pdf"
+import SertifikatFoto from "./assets/images/Dicoding.png";
+import Figma from "./assets/images/Ui Ux.jpeg"
+import Nexa from "./assets/images/Sertifikat Magang.jpeg"
+import BNSP from "./assets/images/Sertifikat BNSP.jpeg"
 
 export const Tools = [
     {
@@ -129,13 +133,35 @@ export const Project = [
         image : Portfolio,
         tools : ["Typescript", "ReactJs", "Tailwindcss"]
     },    
+    {
+        id : 4,
+        name : "Aplication Mobile Kedai Sesawi",
+        ket : "This is a UI UX project that I made for the 2nd semester UAS assessment.",
+        image : Figma,
+        tools : ["Figma"]
+    },    
 ];
 
 export const Certificate = [
     {
+        id : 2,
+        name : "Internship Certificate",
+        ket : "vocational school internship certificate.",
+        image : Nexa,
+    },
+    {
+        id : 3,
+        name : "Certificate Of Competence",
+        ket : "Junior Office Operator.",
+        image : BNSP,
+    },
+]
+
+export const Certificates = [ 
+    {
         id : 1,
         name : "Certificate Dicoding",
-        ket : "Certificate: Web Front-End Development (Beginner Level) Dicoding Indonesia",
-        file : Sertifikat,
-    },
+        ket : "Certificate: Web Front-End Development (Beginner Level) Dicoding Indonesia.",
+        image : SertifikatFoto,
+    }
 ]

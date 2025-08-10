@@ -19,7 +19,7 @@ export default function Navbar() {
     return (
         <nav className="relative z-50">
             <div className="max-w-5xl mx-auto">
-                <div className="navbar relative py-5 flex items-center justify-between">
+                <div className="navbar relative py-7 flex items-center justify-between">
                     <div className="logo text-3xl font-bold text-white p-1 md:bg-transparent md:dark:text-white px-5">
                         <NavLink to="/" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</NavLink>
                     </div>
