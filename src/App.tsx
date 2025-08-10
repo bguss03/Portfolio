@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
-import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Navbar/Hero';
 import Tentang from './Components/Layout/Tentang';
 // import AnimatedContent from './assets/AnimatedContent/AnimatedContent';
@@ -29,7 +28,6 @@ function App() {
           path='/'
           element={
             <>
-                <Navbar />
                 <Hero />
               <Tentang />
               <Tools />

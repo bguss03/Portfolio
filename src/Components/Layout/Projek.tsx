@@ -6,7 +6,7 @@ export default function Projek() {
   return (
     <div className="text-center py-10" data-aos="fade-up">
       <div className="">
-        <h1 className="text-4xl md:text-4xl font-bold italic">Project</h1>
+        <h1 className="text-4xl md:text-4xl font-bold italic">Projects</h1>
       </div>
       <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {Project.map((projects, index) => (

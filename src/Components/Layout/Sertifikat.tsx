@@ -14,7 +14,7 @@ export default function Sertifikat() {
       <div className="project-box px-4 md:px-16 lg:px-60 mt-10 flex justify-center">
         {Certificates.map((certificates, index) => (
           <div className="border border-zinc-700 rounded-3xl overflow-hidden flex flex-col h-full w-full md:w-1/2 lg:w-[48%]"
-            key={certificates.id} data-aos="fade up" data-aos-delay={index * 300}>
+            key={certificates.id} data-aos="fade-up" data-aos-delay={index * 200}>
             <div className="w-full overflow-hidden">
               {/* <iframe src={certificate.file} className="w-full h-full "></iframe> */}
               <img src={certificates.image} alt="" className="object-cover" />
@@ -29,7 +29,7 @@ export default function Sertifikat() {
       <div className="project-box px-4 md:px-16 lg:px-60 mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         {Certificate.map((certificate, index) => (
           <div className="border border-zinc-700 rounded-3xl overflow-hidden flex flex-col h-full"
-            key={certificate.id} data-aos="fade up" data-aos-delay={index * 300}>
+            key={certificate.id} data-aos="fade-up" data-aos-delay={index * 300}>
             <div className="w-full overflow-hidden">
               {/* <iframe src={certificate.file} className="w-full h-full "></iframe> */}
               <img src={certificate.image} alt="" className="w-full h-70 object-cover" />
