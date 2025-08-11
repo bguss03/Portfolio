@@ -1,12 +1,22 @@
-import Navbar from "../Navbar/Navbar"
+import FuzzyText from "../../assets/FuzzyText/FuzzyText"
 
 export default function NotFound() {
     return (
-        <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <div className="flex flex-1 items-center justify-center" data-aos="fade-up" data-aos-delay={200}>
-                <h1 className="text-6xl italic font-bold">Not Found</h1>
+            <div className="flex flex-col items-center justify-center min-h-screen" data-aos="fade-up" data-aos-delay={200}>
+                <FuzzyText
+                    baseIntensity={0.3}
+                    hoverIntensity={1}
+                    enableHover={true}
+                >
+                    404
+                </FuzzyText>
+                 <FuzzyText
+                    baseIntensity={0.3}
+                    hoverIntensity={1}
+                    enableHover={true}
+                >
+                    Not Found
+                </FuzzyText>
             </div>
-        </div>
     )
 }

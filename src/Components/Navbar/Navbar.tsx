@@ -10,16 +10,14 @@ export default function Navbar() {
         { name: "Project", href: "/Project" },
         { name: "Contact", href: "/Contact" },
     ];
-
-   
-        const defaultNavStyles = "hover:bg-sky-500/20 py-3 px-3 rounded-full";
-        const activeNavStyles = "dark:text-white font-semibold bg-sky-500/20 py-3 px-3 rounded-full";
-
+    
+    const defaultNavStyles = "hover:bg-sky-500/20 py-3 px-3 rounded-full";
+    const activeNavStyles = "dark:text-white font-semibold bg-sky-500/20 py-3 px-3 rounded-full";
 
     return (
         <nav className="relative z-50">
             <div className="max-w-5xl mx-auto">
-                <div className="navbar relative py-7 flex items-center justify-between">
+                <div className="navbar relative py-3 sm:py-7 flex items-center justify-between">
                     <div className="logo text-3xl font-bold text-white p-1 md:bg-transparent md:dark:text-white px-5">
                         <NavLink to="/" className="hover:text-[#113F67] transition-colors duration-300 italic">Bguss</NavLink>
                     </div>
@@ -29,7 +27,7 @@ export default function Navbar() {
                             <li key={item.name} className="text-lg font-semibold italic">
                                 <NavLink
                                     to={item.href}
-                                    className={({ isActive }) => 
+                                    className={({ isActive }) =>
                                         `dark:text-white ${isActive ? activeNavStyles : defaultNavStyles}`
                                     }
                                 >
@@ -52,12 +50,12 @@ export default function Navbar() {
                     ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
                         {menuItems.map((item) =>
                             <li key={item.name} className="border-b border-b-white/20">
-                                <NavLink 
-                                    to={item.href} 
-                                    className={({ isActive }) => 
+                                <NavLink
+                                    to={item.href}
+                                    className={({ isActive }) =>
                                         `block p-4 hover:bg-white/10 ${isActive ? 'bg-white/20 font-bold' : ''}`
                                     }
-                                    onClick={() => setIsMenuOpen(false)} 
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item.name}
                                 </NavLink>
