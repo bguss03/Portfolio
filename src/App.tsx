@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
-import Hero from './Components/Navbar/Hero';
+import Hero from './Components/Layout/Hero';
 import Tentang from './Components/Layout/Tentang';
 // import AnimatedContent from './assets/AnimatedContent/AnimatedContent';
 import Tools from './Components/Layout/Toolss';
