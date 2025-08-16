@@ -35,7 +35,7 @@ const handleClose = () => {
       }
       setModalData(null);
       setIsClosing(false); 
-    }, 200); 
+    }, 100); 
 };
 
   //handleImageClick
@@ -80,7 +80,8 @@ const handleClose = () => {
           </div>
         ))}
       </div>
-      <dialog id="sertifikatModal" className={`modal modal-middle sm:modal-middle ${isClosing} 'animate-fade-out' : 'animate-fade-in'`}>
+      <dialog id="sertifikatModal" className={`modal modal-middle sm:modal-middle 
+          ${isClosing} 'animate-fade-out' : 'animate-fade-in'`}>
         <div className="modal-box">
           {modalData && (
             <>

@@ -11,7 +11,8 @@ interface ProjectsData {
 
 export default function ProjectAll() {
 
-  const [modalData, setModalData] = useState < ProjectsData | null > (null)
+  const [modalData, setModalData] = useState < ProjectsData | null > (null);
+  const [isClosing, setIsClosing] = useState <boolean>(false);
   
   const handleOpen = (projectsData : ProjectsData) => {
     setModalData(projectsData);
@@ -21,13 +22,17 @@ export default function ProjectAll() {
     }
   };
 
-  const handleClose = () => {
-    const modal = document.getElementById('projectsModal') as HTMLDialogElement
-    if (modal){
-      modal.close();
-    }
+   const handleClose = () => {
+    setIsClosing(true); 
+    setTimeout(() => {
+      const modal = document.getElementById('projectsModal') as HTMLDialogElement;
+      if (modal) {
+        modal.close(); 
+      }
+      setModalData(null);
+      setIsClosing(false); 
+    }, 100); 
 };
-
   return (
     <div>
       <div className="text-center pt-5" data-aos="fade-up" data-aos-delay={300}>
@@ -64,7 +69,7 @@ export default function ProjectAll() {
             </div>
           ))}
         </div>
-      <dialog id="projectsModal" className="modal modal-middle sm:modal-middle">
+      <dialog id="projectsModal" className={`modal modal-middle sm:modal-middle ${isClosing} 'animate-fade-out' : 'animate-fade-in'`}>
         <div className="modal-box">
           {modalData && (
             <>

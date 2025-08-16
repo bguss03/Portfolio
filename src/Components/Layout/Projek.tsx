@@ -15,6 +15,7 @@ interface ProjectData {
 
 export default function Projek() {
   const [modalData, setModalData] = useState < ProjectData | null > (null);
+  const [isClosing, setIsClosing] = useState <boolean>(false);
 
   const handleOpen = (projectData : ProjectData) => {
     setModalData(projectData);
@@ -24,12 +25,17 @@ export default function Projek() {
     }
   };
 
-  const handleClose = () => {
-    const modal = document.getElementById('projectModal') as HTMLDialogElement;
-    if (modal) {
-      modal.close();
-    }
-  }
+ const handleClose = () => {
+    setIsClosing(true); 
+    setTimeout(() => {
+      const modal = document.getElementById('projectModal') as HTMLDialogElement;
+      if (modal) {
+        modal.close(); 
+      }
+      setModalData(null);
+      setIsClosing(false); 
+    }, 100); 
+};
 
   return (
     <div className="text-center py-10" data-aos="fade-up">
@@ -67,7 +73,7 @@ export default function Projek() {
         ))}
       </div>
 
-      <dialog id="projectModal" className="modal modal-middle sm:modal-middle">
+      <dialog id="projectModal" className={`modal modal-middle sm:modal-middle ${isClosing} 'animate-fade-out' : 'animate-fade-in' `}>
         <div className="modal-box">
           {modalData && (
             <>
