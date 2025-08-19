@@ -20,6 +20,7 @@ import SertifikatFoto from "./assets/images/Dicoding.png";
 import Figma from "./assets/images/Ui Ux.jpeg"
 import Nexa from "./assets/images/Sertifikat Magang.jpeg"
 import BNSP from "./assets/images/Sertifikat BNSP.jpeg"
+import Lia from "./assets/images/Sertifikat Lia.png"
 
 export const Tools = [
     {
@@ -143,25 +144,28 @@ export const Project = [
 ];
 
 export const Certificate = [
-    {
+     {
+        id : 1,
+        name : "Certificate Dicoding",
+        ket : "Certificate: Web Front-End Development (Beginner Level) Dicoding Indonesia.",
+        image : SertifikatFoto,
+    },
+     {
         id : 2,
+        name : "Certificate Lia",
+        ket : "Lia Language Institute Certificate.",
+        image : Lia,
+    },
+    {
+        id : 3,
         name : "Internship Certificate",
         ket : "vocational school internship certificate.",
         image : Nexa,
     },
     {
-        id : 3,
+        id : 4,
         name : "Certificate Of Competence",
         ket : "Junior Office Operator.",
         image : BNSP,
     },
-]
-
-export const Certificates = [ 
-    {
-        id : 1,
-        name : "Certificate Dicoding",
-        ket : "Certificate: Web Front-End Development (Beginner Level) Dicoding Indonesia.",
-        image : SertifikatFoto,
-    }
 ]
