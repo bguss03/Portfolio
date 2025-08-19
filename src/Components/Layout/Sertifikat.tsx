@@ -54,7 +54,7 @@ const handleClose = () => {
             key={certificate.id} data-aos="fade-up" data-aos-delay={index * 300} onClick={()=> handleOpen(certificate)}>
             <div className="w-full overflow-hidden">
               {/* <iframe src={certificate.file} className="w-full h-full "></iframe> */}
-              <img src={certificate.image} alt="" className="w-full h-70 object-cover" />
+              <img src={certificate.image} alt="" className="w-full h-70 object-cover transition-transform duration-300 hover:scale-105" />
             </div>
             <div className="p-4 flex flex-col flex-grow">
               <h1 className="text-2xl font-bold my-2">{certificate.name}</h1>

@@ -35,11 +35,12 @@ export default function ProjectAll() {
 };
   return (
     <div>
-      <div className="text-center pt-5" data-aos="fade-up" data-aos-delay={300}>
+      <div className="text-center pt-5 sm:py-15" data-aos="fade-up" data-aos-delay={300}>
         <div>
-          <h1 className="text-4xl md:text-6xl font-bold italic">Projects</h1>
+          <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">Projects</h1>
+          <p className="mt-2 text-lg/8 text-gray-400">Projects I have completed.</p>
         </div>
-        <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="project-box px-4 md:px-16 lg:px-60 grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 sm:mt-16">
           {Project.map((projek, index) => (
             <div
               className="border border-zinc-700 rounded-3xl overflow-hidden flex flex-col h-full cursor-pointer"

@@ -1,6 +1,9 @@
 import { useState } from "react";
+// import type { Dispatch, SetStateAction } from "react";
 import { MotionConfig, motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+// import { FiMoon, FiSun } from "react-icons/fi";
+
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +15,7 @@ export default function Navbar() {
     ];
     
     const defaultNavStyles = "hover:bg-sky-500/20 py-3 px-3 rounded-full";
-    const activeNavStyles = "dark:text-white font-semibold bg-sky-500/20 py-3 px-3 rounded-full";
+    const activeNavStyles = "font-semibold bg-sky-500/20 py-3 px-3 rounded-full";
 
     return (
         <nav className="relative z-50">
