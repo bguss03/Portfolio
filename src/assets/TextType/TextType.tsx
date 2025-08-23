@@ -61,11 +61,6 @@ const TextType = ({
     return Math.random() * (max - min) + min;
   };
 
-  const getCurrentTextColor = () => {
-    if (textColors.length === 0) return "#ffffff";
-    return textColors[currentTextIndex % textColors.length];
-  };
-
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
 
@@ -181,7 +176,7 @@ const TextType = ({
       className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
       ...props,
     },
-    <span className="inline" style={{ color: getCurrentTextColor() }}>
+    <span className="inline">
       {displayedText}
     </span>,
     showCursor && (

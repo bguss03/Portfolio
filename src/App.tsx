@@ -22,13 +22,13 @@ function App() {
   }, []);
   return (
     <>
-    <ScrollToTop />
+      <ScrollToTop />
       <Routes>
         <Route
           path='/'
           element={
             <>
-                <Hero />
+              <Hero />
               <Tentang />
               <Tools />
               <Projek />

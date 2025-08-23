@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Project } from "../../data"
+import { Project } from "../../data";
+import { useState } from "react"; 
 
-interface ProjectsData {
+interface ProjectData {
   id : number,
   name : string,
   ket : string,
@@ -9,82 +9,85 @@ interface ProjectsData {
   tools : string[];
 }
 
-export default function ProjectAll() {
+export default function Projek() {
+  const [modalData, setModalData] = useState<ProjectData | null>(null);
+  const [isClosing, setIsClosing] = useState<boolean>(false);
 
-  const [modalData, setModalData] = useState < ProjectsData | null > (null);
-  const [isClosing, setIsClosing] = useState <boolean>(false);
-  
-  const handleOpen = (projectsData : ProjectsData) => {
-    setModalData(projectsData);
-    const modal = document.getElementById('projectsModal') as HTMLDialogElement;
+  const handleOpen = (projectData: ProjectData) => {
+    setModalData(projectData);
+    const modal = document.getElementById('projectModal') as HTMLDialogElement;
     if (modal) {
       modal.showModal();
     }
   };
 
-   const handleClose = () => {
+  const handleClose = () => {
     setIsClosing(true); 
+
     setTimeout(() => {
-      const modal = document.getElementById('projectsModal') as HTMLDialogElement;
+      const modal = document.getElementById('projectModal') as HTMLDialogElement;
       if (modal) {
         modal.close(); 
       }
-      setModalData(null);
+      setModalData(null); 
       setIsClosing(false); 
-    }, 100); 
-};
+    }, 300); 
+  };
+
   return (
-    <div>
-      <div className="text-center pt-5 sm:py-15" data-aos="fade-up" data-aos-delay={300}>
-        <div>
-          <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">Projects</h1>
-          <p className="mt-2 text-lg/8 text-gray-400">Projects I have completed.</p>
-        </div>
-        <div className="project-box px-4 md:px-16 lg:px-60 grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 sm:mt-16">
-          {Project.map((projek, index) => (
-            <div
-              className="border border-zinc-700 rounded-3xl overflow-hidden flex flex-col h-full cursor-pointer"
-              key={projek.id}
-              onClick={() => handleOpen(projek)}
-              data-aos="fade-up"
-              data-aos-delay={index * 200}
-            >
-              <div className="w-full aspect-video overflow-hidden">
-                <img
-                  src={projek.image}
-                  alt={projek.name}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <h1 className="text-2xl font-bold my-2">{projek.name}</h1>
-                <p className="text-base/loose mb-4 opacity-70 flex-grow">{projek.ket}</p>
-                <div className="flex flex-wrap gap-2">
-                  {projek.tools.map((alat, index) => (
-                    <p key={index} className="py-1 px-3 border border-zinc-500 rounded-lg font-semibold text-sm hover:bg-zinc-700">
-                      {alat}
-                    </p>
-                  ))}
-                </div>
+    <div className="text-center py-10" data-aos="fade-up" >
+       <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {Project.map((project, index) => (
+          <div
+            className="border border-[#EEE6CA] dark:border-zinc-700 rounded-2xl hover:shadow-md shadow-black delay-100 overflow-hidden flex flex-col h-full cursor-pointer"
+            key={project.id}
+            onClick={() => handleOpen(project)}
+            data-aos="fade-up"
+            data-aos-delay={index * 200}
+          >
+            <div className="w-full overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-60 object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="p-4 flex flex-col flex-grow">
+              <h1 className="text-2xl font-bold my-2">{project.name}</h1>
+              <p className="text-base/loose mb-4 opacity-70 flex-grow">{project.ket}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tools.map((tool, index) => (
+                  <p key={index} className="py-1 px-2 border border-[#EEE6CA] dark:border-zinc-500 rounded-lg font-semibold text-sm hover:bg-zinc-700">
+                    {tool}
+                  </p>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      <dialog id="projectsModal" className={`modal modal-middle sm:modal-middle ${isClosing} 'animate-fade-out' : 'animate-fade-in'`}>
-        <div className="modal-box">
+          </div>
+        ))}
+      </div>
+
+      <dialog 
+        id="projectModal" 
+        className={`modal modal-middle sm:modal-middle ${isClosing ? 'modal-closing' : ''}`}
+      >
+        <form method="dialog" className="modal-box bg-[#f4f8e5] dark:bg-zinc-800 rounded-2xl">
           {modalData && (
-            <>
-              <img src={modalData.image} alt={modalData.name} className="py-4 w-full rounded-2xl object-contain" />
+            <div>
+              <img 
+                src={modalData.image} 
+                alt={modalData.name} 
+                className="py-4 w-full rounded-2xl object-contain" 
+              />
               <h3 className="font-bold text-2xl">{modalData.name}</h3>
               <p className="py-4">{modalData.ket}</p>
-            </>
+            </div>
           )}
-          <div className="modal-action">
-              <button className="btn" onClick={handleClose}>Close</button>
+          <div className="modal-action mt-6">
+            <button className="btn border-0 rounded-2xl" type="button" onClick={handleClose}>Close</button>
           </div>
-        </div>
+        </form>
       </dialog>
-      </div>
     </div>
   );
 }

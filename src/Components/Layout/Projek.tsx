@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react"; 
 
 const idSelect = [3, 4];
+
 const projectsOnPage = Project.filter(myProjek => idSelect.includes(myProjek.id));
+
+
 
 interface ProjectData {
   id : number,
@@ -14,40 +17,41 @@ interface ProjectData {
 }
 
 export default function Projek() {
-  const [modalData, setModalData] = useState < ProjectData | null > (null);
-  const [isClosing, setIsClosing] = useState <boolean>(false);
+  const [modalData, setModalData] = useState<ProjectData | null>(null);
+  const [isClosing, setIsClosing] = useState<boolean>(false);
 
-  const handleOpen = (projectData : ProjectData) => {
+  const handleOpen = (projectData: ProjectData) => {
     setModalData(projectData);
-    const modal = document.getElementById('projectModal') as HTMLDialogElement ;
+    const modal = document.getElementById('projectModal') as HTMLDialogElement;
     if (modal) {
       modal.showModal();
     }
   };
 
- const handleClose = () => {
+  const handleClose = () => {
     setIsClosing(true); 
+
     setTimeout(() => {
       const modal = document.getElementById('projectModal') as HTMLDialogElement;
       if (modal) {
         modal.close(); 
       }
-      setModalData(null);
+      setModalData(null); 
       setIsClosing(false); 
-    }, 100); 
-};
+    }, 300); 
+  };
 
   return (
-    <div className="text-center py-10" data-aos="fade-up">
-      <div className="">
-        <h1 className="text-4xl md:text-4xl font-bold italic">Projects</h1>
+    <div className="text-center py-10" data-aos="fade-up" >
+      <div className="p-6 text-center" data-aos="fade-up">
+        <h1 className="text-4xl italic font-bold">Projects</h1>
       </div>
-      <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+       <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {projectsOnPage.map((project, index) => (
           <div
-            className="border border-zinc-700 rounded-3xl overflow-hidden flex flex-col h-full cursor-pointer"
+            className=" border border-[#EEE6CA] dark:border-zinc-700 hover:shadow-md shadow-black delay-100 rounded-2xl overflow-hidden flex flex-col h-full cursor-pointer"
             key={project.id}
-            onClick={() => handleOpen(project)} 
+            onClick={() => handleOpen(project)}
             data-aos="fade-up"
             data-aos-delay={index * 200}
           >
@@ -55,7 +59,7 @@ export default function Projek() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-50 object-cover transition-transform duration-300 hover:scale-105"
+                className="w-full h-60 object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div className="p-4 flex flex-col flex-grow">
@@ -73,24 +77,32 @@ export default function Projek() {
         ))}
       </div>
 
-      <dialog id="projectModal" className={`modal modal-middle sm:modal-middle ${isClosing} 'animate-fade-out' : 'animate-fade-in' `}>
-        <div className="modal-box">
+      <dialog 
+        id="projectModal" 
+        className={`modal modal-middle sm:modal-middle ${isClosing ? 'modal-closing' : ''}`}
+        onCancel={(e) => { e.preventDefault(); handleClose(); }}
+      >
+        <form method="dialog" className="modal-box bg-[#f4f8e5] dark:bg-zinc-800 rounded-2xl">
           {modalData && (
-            <>
-              <img src={modalData.image} alt={modalData.name} className="py-4 w-full rounded-2xl object-contain" />
+            <div>
+              <img 
+                src={modalData.image} 
+                alt={modalData.name} 
+                className="py-4 w-full rounded-2xl object-contain" 
+              />
               <h3 className="font-bold text-2xl">{modalData.name}</h3>
               <p className="py-4">{modalData.ket}</p>
-            </>
+            </div>
           )}
-          <div className="modal-action">
-              <button className="btn" onClick={handleClose}>Close</button>
+          <div className="modal-action mt-6">
+            <button className="btn border-0 rounded-2xl" type="button" onClick={handleClose}>Close</button>
           </div>
-        </div>
+        </form>
       </dialog>
 
-      <div className="py-10" data-aos="fade-up" data-aos-delay={200}>
+       <div className="py-10" data-aos="fade-up" data-aos-delay={200}>
         <Link to="/project">
-            <button className="w-40 h-13 bg-[#77BEF0] hover:bg-[#113F67] p-3 rounded-2xl italic text-center font-bold">More Projects</button>
+            <button className="w-40 h-13 bg-[#1B56FD] hover:bg-[#134deb] text-white p-3 rounded-2xl italic text-center font-bold">More Projects</button>
         </Link>
       </div>
     </div>

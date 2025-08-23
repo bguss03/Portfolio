@@ -10,7 +10,7 @@ export default function Toolss() {
       <div className="grid grid-cols-2 px-3 sm:flex justify-center mt-10 gap-6 max-w-4xl mx-auto">
         {Tools.map((tool) => (
           <div
-            className="flex items-center gap-3 p-2 sm:w-50  border border-zinc-700 rounded-md hover:bg-zinc-700"
+            className="flex items-center gap-3 p-2 sm:w-50 border border-[#EEE6CA] dark:border-zinc-700 rounded-md hover:bg-zinc-700"
             key={tool.id}
             data-aos="fade-up"
           >
@@ -26,7 +26,7 @@ export default function Toolss() {
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6 w-full max-w-4xl mx-auto px-3">
         {listSkill.map((skill, index) => (
           <div
-            className="flex items-center gap-3 p-2 border border-zinc-700 rounded-md hover:bg-zinc-700"
+            className="flex items-center gap-3 p-2 border border-[#EEE6CA] dark:border-zinc-700 rounded-md hover:bg-zinc-700"
             key={skill.id}
             data-aos="fade-up"
             data-aos-delay={index * 50}
