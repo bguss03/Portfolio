@@ -10,7 +10,6 @@ export default function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setShowAlert(true); 
-
     setName('');
     setCompany('');
     setEmail('');

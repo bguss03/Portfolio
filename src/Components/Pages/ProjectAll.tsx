@@ -36,7 +36,7 @@ export default function Projek() {
 
   return (
     <div className="text-center py-10" data-aos="fade-up" >
-       <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+       <div className="project-box px-4 md:px-16 lg:px-15 xl:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {Project.map((project, index) => (
           <div
             className="border border-[#EEE6CA] dark:border-zinc-700 rounded-2xl hover:shadow-md shadow-black delay-100 overflow-hidden flex flex-col h-full cursor-pointer"

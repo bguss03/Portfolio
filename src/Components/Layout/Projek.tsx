@@ -46,7 +46,7 @@ export default function Projek() {
       <div className="p-6 text-center" data-aos="fade-up">
         <h1 className="text-4xl italic font-bold">Projects</h1>
       </div>
-       <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+       <div className="project-box px-4 md:px-16 lg:px-15 xl:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {projectsOnPage.map((project, index) => (
           <div
             className=" border border-[#EEE6CA] dark:border-zinc-700 hover:shadow-md shadow-black delay-100 rounded-2xl overflow-hidden flex flex-col h-full cursor-pointer"

@@ -39,7 +39,7 @@ export default function Sertifikat() {
         <h1 className="text-4xl italic font-bold">Certificate</h1>
       </div>
 
-      <div className="project-box px-4 md:px-16 lg:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="sertifikat-box px-4 md:px-16 lg:px-15 xl:px-60mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {Certificate.map((Certificates, index) => (
           <div
             className="border border-[#EEE6CA] dark:border-zinc-700 rounded-2xl hover:shadow-md shadow-black delay-100 overflow-hidden flex flex-col h-full cursor-pointer"

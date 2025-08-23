@@ -11,9 +11,9 @@ export default function Hero() {
                 <div className="flex flex-col px-10 items-center sm:items-start sm:text-left min-w-[350px] sm:min-w-[550px]" data-aos='fade-up' data-aos-delay={200}>
                     <h1 className="text-3xl font-bold italic 
                             sm:text-5xl">Hi, I am  Bagus </h1>
-                    <div className="text-animation">
+                    <div className="text-animation py-2">
                         <TextType
-                            className="text-2xl sm:text-4xl italic font-bold "
+                            className="text-2xl sm:text-4xl italic font-bold text-[#1B56FD]"
                             text={["A Front End Developer", "& Fullstack Enthusiast"]}
                             typingSpeed={100}
                             pauseDuration={1500}
