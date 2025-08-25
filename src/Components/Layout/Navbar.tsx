@@ -56,7 +56,7 @@ export default function Navbar() {
                         <NavLink to="/" className="hover:text-[#9EC6F3] dark:hover:text-[#113F67] transition-colors duration-300 italic">Bguss</NavLink>
                     </div>
 
-                    <div className="flex flex-items-center gap-x-5 px-5">
+                    <div className="flex flex-items-center gap-x-5">
                         <ul className='hidden md:flex items-center gap-5 px-5'>
                             {menuItems.map((item) => (
                                 <li key={item.name} className="text-lg font-semibold italic">
