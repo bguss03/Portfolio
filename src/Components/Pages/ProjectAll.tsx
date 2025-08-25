@@ -57,7 +57,7 @@ export default function Projek() {
               <p className="text-base/loose mb-4 opacity-70 flex-grow">{project.ket}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tools.map((tool, index) => (
-                  <p key={index} className="py-1 px-2 border border-[#EEE6CA] dark:border-zinc-500 rounded-lg font-semibold text-sm hover:bg-zinc-700">
+                  <p key={index} className="py-1 px-2 border border-[#EEE6CA] dark:border-zinc-500 rounded-lg font-semibold text-sm hover:bg-[#eaf0d6] dark:hover:bg-zinc-700">
                     {tool}
                   </p>
                 ))}

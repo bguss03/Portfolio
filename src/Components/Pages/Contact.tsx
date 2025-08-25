@@ -59,7 +59,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="mt-10">
+          <div className="mt-15">
             <button type="submit" className="block w-full rounded-md bg-[#1B56FD] hover:bg-[#134deb] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs">
               Submit
             </button>
