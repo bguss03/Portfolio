@@ -22,7 +22,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className="isolate px-6 pt-5 sm:py-15 lg:px-8" data-aos='fade-up' data-aos-delay={200}>
+      <div className="isolate px-6 pt-30 sm:pt-30 lg:px-8" data-aos='fade-up' data-aos-delay={200}>
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"

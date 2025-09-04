@@ -5,9 +5,9 @@ import Resume from "../../assets/file/CV_Ananda Bagus Shevchenko.pdf"
 
 export default function Hero() {
     return (
-        <div>
+        // <div className="bg-gradient-to-t from-[#F5FAE1] to-violet-700 dark:bg-gradient-to-tl dark:from-zinc-900 dark:to-violet-900">
             <div className="flex flex-col-reverse sm:flex-row items-center
-                    sm:justify-center pt-5 sm:pt-15 gap-16 p-25 dark:bg-zinc-900">
+                    sm:justify-center pt-30 sm:pt-30 gap-16 p-25 min-h-screen">
                 <div className="flex flex-col px-10 items-center sm:items-start sm:text-left min-w-[350px] sm:min-w-[550px]" data-aos='fade-up' data-aos-delay={200}>
                     <h1 className="text-3xl font-bold italic 
                             sm:text-5xl">Hi, I am  Bagus </h1>
@@ -35,7 +35,7 @@ export default function Hero() {
                     />
                 </div>
             </div>
-        </div>
+        // </div>
 
     );
 }

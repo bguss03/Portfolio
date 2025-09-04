@@ -1,12 +1,12 @@
 import { Project } from "../../data";
-import { useState } from "react"; 
+import { useState } from "react";
 
 interface ProjectData {
-  id : number,
-  name : string,
-  ket : string,
-  image : string,
-  tools : string[];
+  id: number,
+  name: string,
+  ket: string,
+  image: string,
+  tools: string[];
 }
 
 export default function Projek() {
@@ -22,24 +22,24 @@ export default function Projek() {
   };
 
   const handleClose = () => {
-    setIsClosing(true); 
+    setIsClosing(true);
 
     setTimeout(() => {
       const modal = document.getElementById('projectModal') as HTMLDialogElement;
       if (modal) {
-        modal.close(); 
+        modal.close();
       }
-      setModalData(null); 
-      setIsClosing(false); 
-    }, 300); 
+      setModalData(null);
+      setIsClosing(false);
+    }, 300);
   };
 
   return (
-    <div className="text-center pt-5 sm:py-15 lg:px-8" data-aos="fade-up" >
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">Projects</h2>
-        </div>
-       <div className="project-box px-4 md:px-16 lg:px-15 xl:px-60 mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="text-center pt-30 sm:pt-30 lg:px-8" data-aos="fade-up" >
+      <div className="mx-auto max-w-2xl text-center">
+        <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">Projects</h2>
+      </div>
+      <div className="project-box px-4 md:px-16 lg:px-15 xl:px-60 mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         {Project.map((project, index) => (
           <div
             className="border border-[#EEE6CA] dark:border-zinc-700 rounded-2xl hover:shadow-md shadow-black delay-100 overflow-hidden flex flex-col h-full cursor-pointer"
@@ -70,17 +70,17 @@ export default function Projek() {
         ))}
       </div>
 
-      <dialog 
-        id="projectModal" 
+      <dialog
+        id="projectModal"
         className={`modal modal-middle sm:modal-middle ${isClosing ? 'modal-closing' : ''}`}
       >
         <form method="dialog" className="modal-box bg-[#f4f8e5] dark:bg-zinc-800 rounded-2xl">
           {modalData && (
             <div>
-              <img 
-                src={modalData.image} 
-                alt={modalData.name} 
-                className="py-4 w-full rounded-2xl object-contain" 
+              <img
+                src={modalData.image}
+                alt={modalData.name}
+                className="py-4 w-full rounded-2xl object-contain"
               />
               <h3 className="font-bold text-2xl">{modalData.name}</h3>
               <p className="py-4">{modalData.ket}</p>

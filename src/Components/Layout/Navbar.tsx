@@ -49,10 +49,10 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="relative z-50">
+        <nav className={`fixed top-0 left-0 w-full h-20 z-50 ${isMenuOpen ? '' : 'backdrop-blur-xs'}`}>
             <div className="max-w-5xl mx-auto">
-                <div className="navbar relative py-3 sm:py-7 flex items-center justify-between">
-                    <div className="logo text-3xl font-bold p-1 md:bg-transparent md:dark:text-white px-5">
+                <div className="navbar relative py-0 sm:py-6 flex items-center justify-between">
+                    <div className="logo relative z-50 text-3xl font-bold p-1 md:bg-transparent md:dark:text-white px-5">
                         <NavLink to="/" className="hover:text-[#9EC6F3] dark:hover:text-[#113F67] transition-colors duration-300 italic">Bguss</NavLink>
                     </div>
 
@@ -72,7 +72,7 @@ export default function Navbar() {
                             ))}
                         </ul>
                         <div className="flex items-center gap-x-2">
-                            <label className="swap swap-rotate ">
+                            <label className="swap swap-rotate relative z-50 ">
                                 <input
                                     type="checkbox"
                                     className="theme-controller"
@@ -96,9 +96,8 @@ export default function Navbar() {
                             </div>
                         </div>
                     </div>
-
                     <ul className={`
-                        absolute top-full left-0 right-0 z-40 min-h-screen flex flex-col items-center pt-30 gap-y-8
+                        absolute top-0 left-0 right-0 z-40 min-h-screen flex flex-col items-center pt-50 gap-y-8
                         bg-[#F5FAE1]/95 text-black backdrop-blur-xl
                         dark:bg-zinc-900/95 dark:text-white
                          md:hidden
