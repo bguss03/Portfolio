@@ -35,7 +35,7 @@ export default function Projek() {
   };
 
   return (
-    <div className="text-center pt-30 sm:pt-30 lg:px-8" data-aos="fade-up" >
+    <div className="text-center pt-30 sm:pt-35 lg:px-8" data-aos="fade-up" >
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">Projects</h2>
       </div>
