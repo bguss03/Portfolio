@@ -97,7 +97,7 @@ export default function Navbar() {
                         </div>
                     </div>
                     <ul className={`
-                        absolute top-0 left-0 right-0 z-40 min-h-screen flex flex-col items-center pt-50 gap-y-8
+                        absolute top-0 left-0 right-0 z-40 min-h-screen flex flex-col items-center pt-55 gap-y-8
                         bg-[#F5FAE1]/95 text-black backdrop-blur-xl
                         dark:bg-zinc-900/95 dark:text-white
                          md:hidden
