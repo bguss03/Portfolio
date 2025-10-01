@@ -44,12 +44,12 @@ export default function Projek() {
   return (
     <div className="text-center py-10" data-aos="fade-up" >
       <div className="p-6 text-center" data-aos="fade-up">
-        <h1 className="text-4xl italic font-bold">Projects</h1>
+        <h1 className="text-3xl sm:text-4xl italic font-bold">Projects</h1>
       </div>
-       <div className="project-box px-4 md:px-16 lg:px-15 xl:px-60 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+       <div className="project-box px-10 md:px-16 lg:px-15 xl:px-80 mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {projectsOnPage.map((project, index) => (
           <div
-            className=" border border-[#EEE6CA] dark:border-zinc-700 hover:shadow-md shadow-black delay-100 rounded-2xl overflow-hidden flex flex-col h-full cursor-pointer"
+            className="border border-[#EEE6CA] dark:border-zinc-700 hover:shadow-md shadow-black delay-100 rounded-2xl overflow-hidden flex flex-col h-full cursor-pointer w-80"
             key={project.id}
             onClick={() => handleOpen(project)}
             data-aos="fade-up"
@@ -59,7 +59,7 @@ export default function Projek() {
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-60 object-cover transition-transform duration-300 hover:scale-105"
+                className="w-full h-60 p-5 object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div className="p-4 flex flex-col flex-grow">

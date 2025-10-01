@@ -76,7 +76,7 @@ export const listSkill = [
     },
     {
         id : 6,
-        name : "Tailwindcss",
+        name : "Tailwind",
         image : Skill6,
         ket : "Framework",
     },
@@ -149,23 +149,29 @@ export const Certificate = [
         name : "Certificate Dicoding",
         ket : "Certificate: Web Front-End Development (Beginner Level) Dicoding Indonesia.",
         image : SertifikatFoto,
+        gridClass : 'md:col-span-1 md:row-span-1',
     },
      {
-        id : 2,
-        name : "Certificate Lia",
-        ket : "Lia Language Institute Certificate.",
-        image : Lia,
-    },
-    {
-        id : 3,
-        name : "Internship Certificate",
-        ket : "vocational school internship certificate.",
-        image : Nexa,
-    },
-    {
-        id : 4,
-        name : "Certificate Of Competence",
-        ket : "Junior Office Operator.",
-        image : BNSP,
-    },
+       id : 2,
+       name : "Certificate Lia",
+       ket : "Lia Language Institute Certificate.",
+       image : Lia,
+        gridClass : 'md:col-span-1 md:row-span-1',
+   },
+    // {
+    //     id : 3,
+    //     name : "Internship Certificate",
+    //     ket : "vocational school internship certificate.",
+    //     image : Nexa,
+    //     gridClass : 'md:col-span-2 md:row-span-2',
+
+    // },
+    // {
+    //     id : 4,
+    //     name : "Certificate Of Competence",
+    //     ket : "Junior Office Operator.",
+    //     image : BNSP,
+    //     gridClass : 'md:col-span-2 md:row-span-2',
+    // },
+   
 ]
