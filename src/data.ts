@@ -18,8 +18,8 @@ import Portfolio from "./assets/images/portfolio.png"
 // import Sertifikat from "./assets/file/Sertifikat_Dicoding.pdf"
 import SertifikatFoto from "./assets/images/Dicoding.png";
 import Figma from "./assets/images/Ui Ux.jpeg"
-import Nexa from "./assets/images/Sertifikat Magang.jpeg"
-import BNSP from "./assets/images/Sertifikat BNSP.jpeg"
+// import Nexa from "./assets/images/Sertifikat Magang.jpeg"
+// import BNSP from "./assets/images/Sertifikat BNSP.jpeg"
 import Lia from "./assets/images/Sertifikat Lia.png"
 
 export const Tools = [
