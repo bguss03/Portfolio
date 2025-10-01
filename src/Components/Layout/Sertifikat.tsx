@@ -57,7 +57,7 @@ export default function Sertifikat() {
         ))}
       </div>
 
-      {/* Modal*/}
+      {/* Modal sertifikat*/}
       <dialog
         id="sertifikatModal"
         ref={modalRef}
